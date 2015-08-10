@@ -1,8 +1,8 @@
 extends ../layout
 block content
     h2 Quiz: el juego de las preguntas
-    form(method='get', action='answer')
-       p Pregunta: #{pregunta}
+    form(method='get', action='/quizes/#{quiz.id}/answer')
+       p Pregunta: #{quiz.pregunta}
        br
        input(type='text', name='respuesta', value='Responda aquí')
        input(type='submit', value='Enviar')
