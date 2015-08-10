@@ -5,4 +5,5 @@ block content
         while i < quizes.length
             tr
             td
-            a(href='quizes/#{quizes[i].id}') #{quizes[i++].pregunta}
+            a(href='quizes/#{quizes[i].id}') #{quizes[i].pregunta}
+            - i++;
