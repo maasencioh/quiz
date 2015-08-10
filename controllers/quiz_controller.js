@@ -9,6 +9,7 @@ exports.index = function(req, res) {
 
 // GET /quizes/:id
 exports.show = function(req, res) {
+    console.log(req.params);
     models.Quiz.findOne(req.params.quizId).then(function(quiz) {
         res.render('quizes/show', { quiz: quiz});
     })
